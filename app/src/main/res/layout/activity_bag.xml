@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5DEB3"
+    tools:context=".Bag_Activity">
+
+    <TextView
+        android:id="@+id/Bag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Рюкзачок"
+        android:textSize="25sp"
+        android:textColor="#DAA520"
+        android:background="#8B4513"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--Поле с характеристиками персонажа -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/InfoCharacter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="#FFF8DC"
+        app:layout_constraintTop_toBottomOf="@id/Bag"
+        >
+        <TextView
+            android:id="@+id/NameText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:maxWidth="200dp"
+            android:text="Имя Персонажа: "
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <TextView
+            android:id="@+id/NameCharacter"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Болдур"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/NameText"
+            />
+        <TextView
+            android:id="@+id/ForceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сила Персонажа: "
+            android:textSize="15sp"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/NameCharacter"
+            />
+        <TextView
+            android:id="@+id/ForceCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/NameCharacter"
+            app:layout_constraintLeft_toRightOf="@id/ForceText"
+            />
+        <TextView
+            android:id="@+id/CarryingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Грузоподъемность персонажа: "
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ForceText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <TextView
+            android:id="@+id/CarryingCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ForceCharacter"
+            app:layout_constraintLeft_toRightOf="@id/CarryingText"
+            />
+        <TextView
+            android:id="@+id/CarryingLimitCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/0"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ForceCharacter"
+            app:layout_constraintLeft_toRightOf="@id/CarryingCharacter"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/InfoCharacter"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сумка"
+                />
+            <TextView
+                android:id="@+id/textTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TestItem"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:text="Добавить пердмет"
+        />
+
+</LinearLayout>
